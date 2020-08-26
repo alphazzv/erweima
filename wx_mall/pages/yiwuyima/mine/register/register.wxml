@@ -1,0 +1,9 @@
+<view class="container">
+  <view class="header">注册</view>
+  <input class="phone_number" placeholder="请输入用户名"></input>
+  <input class="phone_number" placeholder="请输入邮箱"></input>
+  <input class="phone_number" placeholder="请输入密码"></input>
+  <input class="phone_number" placeholder="再次输入密码"></input>
+  <input class="phone_number" placeholder="请输入手机号"></input>
+  <button class="login">注册</button>
+</view>

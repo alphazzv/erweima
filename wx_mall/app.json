@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/yiwuyima/index/index",
+    "pages/yiwuyima/list/list",
+    "pages/yiwuyima/cart/cart",
+    "pages/yiwuyima/mine/mine",
+    "pages/yiwuyima/detail/detail",
+    "pages/yiwuyima/jianjie/index",
+    "pages/yiwuyima/address/address",
+    "pages/yiwuyima/mine/login/login",
+    "pages/yiwuyima/mine/register/register"
+  ],
+  "tabBar": {
+    "color": "#858585",
+    "selectedColor": "#008842",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/yiwuyima/index/index",
+        "iconPath": "images/icons/btn-tabs_01.png",
+        "selectedIconPath": "images/icons/btn-tabs_07.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/yiwuyima/list/list",
+        "iconPath": "images/icons/btn-tabs_03.png",
+        "selectedIconPath": "images/icons/btn-tabs_08.png",
+        "text": "产品"
+      },
+      {
+        "pagePath": "pages/yiwuyima/cart/cart",
+        "iconPath": "images/icons/btn-tabs_05.png",
+        "selectedIconPath": "images/icons/btn-tabs_09.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/yiwuyima/mine/mine",
+        "iconPath": "images/icons/btn-tabs_06.png",
+        "selectedIconPath": "images/icons/btn-tabs_10.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "自助溯源",
+    "navigationBarTextStyle": "black"
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
+}

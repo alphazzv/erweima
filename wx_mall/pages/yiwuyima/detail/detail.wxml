@@ -1,0 +1,33 @@
+<view class="detail-box">
+
+    <view class="detail-list">
+        <scroll-view scroll-y="true" style="height: 100%;">
+            <view><image src="{{detailgood.image}}"></image></view>
+            <view class="detail-name">
+                <ul>
+                    <li>{{detailgood.goodsName}}</li>
+                    <li>{{detailgood.goodsPrice}}</li>
+                    <li>剩余数目{{detailgood.goodsQrcodeQuantity}}</li>
+                </ul>
+            </view>
+            <view class='hot-container'>
+
+
+            <view class="hot-title">更多好物</view>
+                    <view class='hot-gooditem'>
+                        <view class='hot-imgview' wx:key="index"  wx:for="{{hotgoods}}" wx:for-index="idx" wx:for-item="hot">
+                        <image class='hot-product' src='{{hot.more_pic}}'/>
+                        </view>
+                    </view>
+</view>
+            </scroll-view>
+    </view>
+ <view class="detail-footer">
+    <view class="detail-1"></view>
+    <view class="detail-2" bindtap="gocart"></view>
+    <button id="{{detailgood.id}}" class="detail-3" bindtap="addCart" >
+    <text>加入购物车</text>
+    </button>
+    <button class="detail-4" bindtap="zf"><text>立即购买</text></button>
+ </view>
+</view>

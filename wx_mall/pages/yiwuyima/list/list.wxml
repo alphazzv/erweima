@@ -1,0 +1,34 @@
+
+ <scroll-view class="categroy-left" scroll-y scroll-with-animation="{{true}}">
+        <view wx:for="{{category}}" wx:key="index" wx:for-item="iitem" data-id="{{iitem.goodsTypeId}}" data-index="{{index}}"
+            bindtap="switchTab"
+            class="cate-list {{curIndex == index?'on':''}}">{{iitem.goodsTypeName}}</view>
+    
+</scroll-view>  
+     <swiper vertical="true" class="category-right" current="{{toView}}" >
+        <swiper-item wx:for="{{category}}" wx:key="{{item.goodsTypeId}}">
+            <scroll-view class="cate-box" id="{{item.goodsTypeId}}" scroll-y >
+                <view class="cate-banner" bindtap="">
+                    <image src="{{item.image}}"></image>
+                </view>
+                <view class="cate-title">
+                    <text>{{item.goodsTypeName+'精选'}}</text>
+                </view>
+              <view class='listuse clearfix' hover-class="none">
+                    <view class="goods-box {{(index+1)%2 == 0?'no-margin':''}}" wx:for="{{item.listgoods}}" wx:for-index="index" wx:for-item="goods" wx:key="cd">
+                        <navigator  class='navi-url' url="/pages/yiwuyima/detail/detail?id={{goods.id}}">
+                            <view class="box">
+                                <image src="{{goods.image}}" class="image">
+                                </image>
+                            </view>
+                            <view class="goodsinfomation">
+                                <view class="goods-title">{{goods.title}}</view>
+                                <view class="goods-intro">{{goods.type}}</view>
+                                </view>
+                        </navigator>
+                    </view>
+                </view>
+            </scroll-view>
+        </swiper-item>
+    </swiper> 
+

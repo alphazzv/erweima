@@ -1,0 +1,96 @@
+page {
+  background: #fafafa;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  align-items: stretch;
+  overflow-x: hidden;
+}
+page{  
+  display: flex;  
+  flex-direction: column;  
+  height: 100%;  
+}  
+.product-name-wrap{
+  margin: 0px 10px;
+  font-size: 14px;
+  color: #404040;
+}
+.ui-list-item-info{
+  margin: 5px 0px;
+}
+.ui-list-item-address{
+  color: #585c64;
+}
+.ui-list-item-time{
+  margin: 5px 0px;
+}
+.ui-list-item-del{
+  position: absolute;
+  right: 10px;
+  color: #ff0000;
+}
+/* 分割线 */
+.separate {
+  margin: 5px 0px;
+  height: 2rpx;
+  background-color: #f2f2f2;
+}
+.add-address{
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 150px;
+  height: 35px;
+  border: 1px #000 solid;
+  line-height: 35px;
+  text-align: center;
+  color: #000;
+  border-radius: 5rpx;
+      display: block;
+}
+.add-img{
+  margin-right: 15rpx;
+  width: 15px;
+  height: 15px;
+}
+.no-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 300rpx;
+}
+
+.no-info .img {
+  width: 100rpx;
+  height: 100rpx;
+  margin-bottom: 30rpx;
+}
+.no-info .text {
+  font-size: 50rpx;
+  height:150rpx;
+  color: #111010;
+  text-align: center;
+  bottom:0;
+  margin-bottom: 30rpx;
+}
+.bun-wrap {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  bottom:0;
+  justify-content: center;
+  align-items: center;
+}
+
+.bun-wrap .bun {
+  width: 100%;
+  background: #808080;
+  font-size: 30rpx;
+  color:white;
+  text-align: center;
+  height: 110rpx;
+  line-height: 100rpx;
+}

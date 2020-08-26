@@ -1,0 +1,72 @@
+<scroll-view scroll-y style='height:100vh;'>
+        <view class='head' bindtap='gotologin'>
+            <view class="no-login">
+                <view class='no-ava'>
+                    <image class='ava' src="/images/icons/wdl.png"></image>
+                </view>
+                <view class='button-login'>点我登录</view>
+            </view>
+        </view>
+  <view class="ordercont">
+   <view class='dingdan' data-index='0' bindtap='toOrderListTap'>
+            <view class='top-title'>
+                <view class='leftmark'/>
+                <view class='text'>我的订单</view>
+            </view>
+            <view class='seemore'>
+                <view class="text">查看全部订单</view>
+               
+      <image src='/images/icons/my_order.png'></image>
+
+            </view>
+        </view>
+    <view class='btn-container'>
+            <view class='icon-wrap' data-index='1' bindtap='toOrderListTap'>
+                <view class='order-icon-wrap'>
+                    <image class='order-icon' src='/images/icons/yangp.png'>
+                    </image>
+                </view>
+                <text class='ordertxt'>待付款</text>
+            </view>
+            <view class='icon-wrap' data-index='2' bindtap='toOrderListTap'>
+                <view class='order-icon-wrap'>
+                    <image class='order-icon' src='/images/icons/yangp.png'>
+                    </image>
+                </view>
+                <text class='ordertxt'>待发货</text>
+            </view>
+            <view class='icon-wrap' data-index='3' bindtap='toOrderListTap'>
+                <view class='order-icon-wrap'>
+                    <image class='order-icon' src='/images/icons/yangp.png'>
+                    </image>
+                </view>
+                <text class='ordertxt'>待收货</text>
+            </view>
+        </view>
+
+  </view>
+
+
+  <navigator url="/pages/yiwuyima/jianjie/index" class='item'>
+    <view class='left'>
+      简介
+    </view>
+    <view class='right'>
+      <image src='/images/icons/my_order.png'></image>
+    </view>
+  </navigator>
+  <navigator url="/pages/yiwuyima/address/address" class='item'>
+    <view class='left'>
+      地址管理
+    </view>
+    <view class='right'>
+      <image src='/images/icons/my_order.png'></image>
+    </view>
+  </navigator>
+    <navigator bindtap='kf' class='item'>
+        <view class='left'>客服</view>
+    <view class='right'>
+      <image src='/images/icons/my_order.png'></image>
+    </view>
+  </navigator>
+</scroll-view>

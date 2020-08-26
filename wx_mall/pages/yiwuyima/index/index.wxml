@@ -1,0 +1,65 @@
+<!--index.wxml-->
+<scroll-view class="container" scroll-y="true" scroll-into-view="{{toView}}"  scroll-top="{{scrollTop}}" bindscroll="scroll">
+
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="swiper-box" id="top">
+  <block wx:for-items="{{banner_list[0].banner}}" wx:key="index">
+    <swiper-item >
+      <image class="slide-image" src="{{item.pic_url}}" bindtap="xx"/>
+    </swiper-item>
+  </block>
+</swiper>
+<view class='informbox'>
+    <button class="boxbottom1" bindtap="zanshilogin" ><text>产品入门</text></button>
+    <button class="boxbottom1" bindtap="jump"><text>产品介绍</text></button>
+    <button class="boxbottom1"><text>成功案例</text></button>
+</view>
+<swiper indicator-dots="{{false}}"
+ autoplay="{{autoplay}}" interval="{{interval}}" circular="{{true}}" vertical="{{true}}" class="gonggao">
+   <block wx:for="{{xinxiUrls}}" wx:key="key">
+     <swiper-item>
+     <image class="icon" src="/images/icons/notice-icon.png"></image>
+        <text class="itemtext">{{item}}</text>
+     </swiper-item>
+   </block>
+</swiper>
+ 
+
+
+
+ <view>
+   <block wx:for-items="{{banner_list[1].banner}}" wx:key="index">
+     <view  class="menue-1">
+        <view class="menueimg">
+            <image src="{{item.pic_url}}" class="menue-image" />
+        </view>
+        <view class="menuetext">{{item.title}}</view>
+    </view>
+   </block>
+ </view>
+
+
+ <view class="goods-container">
+ <view class="need-title">精选类型</view>
+            <view class='list-wrap clearfix'>
+                <view class="new-box {{(idx+1)%3 == 0?'no-margin':''}}" wx:for="{{allGoods.list}}" wx:for-index="idx" wx:for-item="iitem" 
+                wx:key="id">
+                    <navigator hover-class='none' class='navi-url' 
+                    url="/pages/yiwuyima/detail/detail?goodsId={{ iitem.goodsId}}">
+                        <view class="box">
+                            <image src="{{iitem.goodsPicture}}" class="image">
+                            </image>
+                        </view>
+                        <view class="goods-info">
+                            <view class="goods-title">{{iitem.goodsTypeName}}</view>
+                        </view>
+                    </navigator>
+                </view>
+            </view>
+        
+
+<view class="more"  bindtap="gotoList">点击查看更多-></view>
+</view>
+
+
+</scroll-view>

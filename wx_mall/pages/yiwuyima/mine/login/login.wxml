@@ -1,0 +1,7 @@
+<view class="container">
+  <view class="header">用户登录</view>
+  <input class="username" placeholder="账号"></input>
+  <input class="password" placeholder="密码" password="yes"></input>
+  <button class="register" bindtap="zhuce">还没有账号？去注册</button>
+  <button class="login">登录</button>
+</view>

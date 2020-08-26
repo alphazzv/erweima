@@ -1,0 +1,127 @@
+page{
+  height: 100%;
+}
+.categroy-left{
+  float: left;
+  width: 150rpx;
+  height: 100%;
+  border-right: 1px solid #ddd;
+  box-sizing: border-box;
+  overflow:hidden;
+}
+.category-right {
+  float: right;
+  width: 586rpx;
+  height: 100%;
+  overflow: hidden;
+}
+.categroy-left .cate-list{
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+}
+.categroy-left .cate-list.on{
+  color: #008842;
+  border-left: 3px solid #008842;
+  font-size: 1.1rem;
+}
+.cate-box {
+  padding: 30rpx;
+  box-sizing: border-box;
+  height: 100%;
+}
+.cate-box .cate-banner image {
+  height: 192rpx;
+  display: block;
+  width: 100%;
+}
+.cate-box .cate-title {
+  line-height: 30rpx;
+  padding: 40rpx 0 60rpx;
+  text-align: center;
+  color: #959595;
+  font-size: .8rem;
+  position: relative;
+}
+.cate-title:before,.cate-title:after {
+  width: 42rpx;
+  height: 1rpx;
+  background-color: #959595;
+  content: '';
+  position: absolute;
+  top: 54rpx;
+}
+.cate-title:after {
+  right: 125rpx;
+}
+.cate-title:before {
+  left: 125rpx;
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.listuse {
+  display: block;
+  width: 100%;
+  padding: 24rpx 0 0 0;
+  height: auto;
+  box-sizing: border-box;
+}
+
+.listuse .goods-box {
+  width: 256rpx;
+  /* height: 330rpx; */
+  float: left;
+  margin: 0 20rpx 20rpx 0;
+}
+
+.listuse .no-margin {
+  margin-right: 0;
+}
+.goods-box .navi-url {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.goods-box .navi-url .image {
+  width: 256rpx;
+  height: 256rpx;
+  border-radius: 8rpx;
+  background: #f9f9f9
+}
+
+.goods-box .navi-url .box {
+  height: 256rpx;
+  width: 256rpx;
+  position: relative;
+  margin-bottom: 10rpx;
+}
+.goods-box .navi-url .goodsinfomation .goods-title {
+  font-size: 35rpx;
+  color: #222;
+  margin-bottom: 6rpx;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.goods-box .navi-url .goodsinfomation .goods-intro {
+  font-size: 30rpx;
+  color: #888;
+  margin-bottom: 6rpx;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}

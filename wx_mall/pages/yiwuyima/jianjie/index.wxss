@@ -1,0 +1,23 @@
+/**index.wxss**/
+  page
+{
+  text-align: center;
+  background-color: #fff;
+}
+.spxx
+{
+  font-size:150%;
+  color:black;
+  font-family:cursive; 
+  font-weight: bold;
+  padding-top: 20px;
+}
+.js
+{
+  padding:20px;
+}
+.xx
+{
+  color: #ccccccf6;
+  font-family:cursive; 
+}
