@@ -8,7 +8,7 @@ Page({
   category: [
     // {name:'产地a',cd:'111',image:'http://img12.yiguoimg.com/e/ad/2016/160914/585749449480249646_260x320.jpg',
 //     {name:'b',id:'222',image:'http://img12.yiguoimg.com/e/ad/2016/160914/585749449480249646_260x320.jpg'},
-    {name:'c',id:'333',image:''},
+   // {name:'c',id:'333',image:''},
 //     {name:'d',id:'444',image:''},
 //     {name:'e',id:'555',image:''},
 //     {name:'f',id:'666',image:''}

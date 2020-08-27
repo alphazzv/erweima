@@ -11,14 +11,54 @@ Page({
    * 当前商品选中事件
    */
   zf:function()
-  { wx.showModal({
-    content:'暂不开放支付功能',
-  })},
+  { var adds = wx.getStorageSync('cartt')||[];
+    
+    for (var index in adds) 
+    {
+      var jsonObj = {"goodsId":adds[index].goodsId};
+      console.log(adds[index].goodsId)
+     
+    wx.request({
+      url: 'https://stu.hrbkyd.com/QRCodeMall/goods/addToShoppingCart',
+      data: jsonObj,
+      method: 'POST', 
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function (res) {
+        console.log(JSON.stringify(res.data))
+      },
+      fail: function (res) {
+        console.log('wrong' + ':' + res)
+      },
+    });
+    this.setData({
+      hasList: false,
+    });
+    try{
+      wx.setStorageSync('cartt',[])
+      wx.request({
+        url: 'https://stu.hrbkyd.com/QRCodeMall/goods/deleteAllShoppingCartGoods',
+        method: 'DELETE', 
+        header: {
+          'content-type': 'application/json'
+        },
+        success: function (res) {
+          console.log(res)
+        },
+       
+      });
+
+    }
+    catch(e)
+    {console.log(e)}
+  }},
 onShow()
   {
     var that=this;
     var arc=wx.getStorageSync('cartt')||[];
     console.log(arc.length)
+    console.log(arc)
     if(arc.length>0)
     {
       this.setData({
@@ -26,6 +66,7 @@ onShow()
         carts:arc
       });
     }
+    this.selectAll();
     this.getTotalPrice();
   },
   selectList(e) {
@@ -87,9 +128,9 @@ onShow()
   addCount(e) {
     const index = e.currentTarget.dataset.index;
     let carts = this.data.carts;
-    let num = carts[index].num;
+    let num = carts[index].goodsStatus;
     num = num + 1;
-    carts[index].num = num;
+    carts[index].goodsStatus = num;
     this.setData({
       carts: carts
     });
@@ -109,12 +150,12 @@ onShow()
     const index = e.currentTarget.dataset.index;
     const obj = e.currentTarget.dataset.obj;
     let carts = this.data.carts;
-    let num = carts[index].num;
+    let num = carts[index].goodsStatus;
     if(num <= 1){
       return false;
     }
     num = num - 1;
-    carts[index].num = num;
+    carts[index].goodsStatus = num;
     this.setData({
       carts: carts
     });
@@ -134,7 +175,7 @@ onShow()
     let total = 0;
     for(let i = 0; i<carts.length; i++) {         // 循环列表得到每个数据
       if(carts[i].selected) {                     // 判断选中才会计算价格
-        total += carts[i].num * carts[i].price;   // 所有价格加起来
+        total += carts[i].goodsStatus * carts[i].goodsPrice;   // 所有价格加起来
       }
     }
     this.setData({                                // 最后赋值到data中渲染到页面

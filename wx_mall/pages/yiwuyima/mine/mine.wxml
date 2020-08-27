@@ -1,10 +1,20 @@
 <scroll-view scroll-y style='height:100vh;'>
-        <view class='head' bindtap='gotologin'>
+        <view class='head' wx:if="{{hasuserInfo==true}}" bindtap='logout'>
+            <view class="no-login">
+                <view class='no-ava'>
+                    <image class='ava' src="/images/icons/wdl.png"></image>
+                </view>
+                <view class='button-login'>{{username}}</view>
+
+            </view>
+        </view>
+         <view class='head' wx:else bindtap='gotologin'>
             <view class="no-login">
                 <view class='no-ava'>
                     <image class='ava' src="/images/icons/wdl.png"></image>
                 </view>
                 <view class='button-login'>点我登录</view>
+
             </view>
         </view>
   <view class="ordercont">

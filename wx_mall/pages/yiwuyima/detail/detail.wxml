@@ -25,7 +25,7 @@
  <view class="detail-footer">
     <view class="detail-1"></view>
     <view class="detail-2" bindtap="gocart"></view>
-    <button id="{{detailgood.id}}" class="detail-3" bindtap="addCart" >
+    <button id="{{detailgood.goodsId}}" class="detail-3" bindtap="addCart" >
     <text>加入购物车</text>
     </button>
     <button class="detail-4" bindtap="zf"><text>立即购买</text></button>

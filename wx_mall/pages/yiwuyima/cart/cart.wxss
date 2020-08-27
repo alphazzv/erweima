@@ -34,16 +34,18 @@
     height: 185rpx;
 }
 .cart-list .cart-pro-name{
-    display: inline-block;
+    display: flex;
     width: 300rpx;
     height: 105rpx;
     line-height: 50rpx;
     overflow: hidden;
+    align-items: center;
 }
 .cart-list .cart-pro-price{
     display: inline-block;
     height: 105rpx;
     line-height: 50rpx;
+    color:#ff5f19;
 }
 .cart-list .cart-count-box{
     position: absolute;
@@ -131,7 +133,7 @@
 .cart-pay{
     float: right;
     text-align: center;
-    width: 100rpx;
+    width: 200rpx;
 }
 .cart-no-data{
     padding:40rpx 0;
@@ -142,8 +144,8 @@
 {
         width: 80%;
         margin-top: 20rpx;
-        background-color: #f3f7a8d7;
-        color: black;
+        background-color: #008842;
+        color: white;
         border-radius: 98rpx;
         display: flex;
         flex-direction: row;

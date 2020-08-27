@@ -2,14 +2,36 @@ const api = require('../../../config/api.js');
 Page({
   data:{
       detailgood:{},
+      listgood:[],
  hotgoods:[
       {
         "more_pic":"http://img10.yiguoimg.com/e/ad/2016/161008/585749449862226248_778x303.jpg"
       }
     ],
   },
+  getData: function ()
+  {
+     var that = this;
+     wx.request({ 
+    url: api.GoodList,
+    method:'GET',
+    header:{
+      'content-type':'application/json'
+    },
+    success:function(res)
+     {
+        console.log(res.data.data);
+          that.setData
+        ({
+            listgood:res.data.data.list,
+            
+          });      
+        },
+     },
+     )},
   onLoad: function (options) 
   {
+    this.getData();
     const that = this;
     const url = 'https://stu.hrbkyd.com/QRCodeMall/goods/' + options.goodsId;
     wx.request({
@@ -34,20 +56,21 @@ Page({
     this.setData({
         toastHidden:false
     });
+    console.log(e.target.id)
     for (var i in this.data.listgood){
        
-        if(this.data.listgood[i].id == e.target.id){
+        if(this.data.listgood[i].goodsId == e.target.id){
             
-            this.data.listgood[i].num = 1;
+            this.data.listgood[i].goodsStatus = 1;
       
             var arc = wx.getStorageSync('cartt') || [];
     
             if(arc.length>0){
                 for(var j in arc){
                 
-                    if(arc[j].id == e.target.id){
+                    if(arc[j].goodsId == e.target.id){
                       
-                        arc[j].num = arc[j].num + 1;
+                        arc[j].goodsStatus = arc[j].goodsStatus + 1;
                         
                         try {
                             wx.setStorageSync('cartt', arc)
@@ -60,6 +83,7 @@ Page({
                 }
             
                 arc.push(this.data.listgood[i]);
+                
                 wx.showToast({
                   title: '已加入购物车',
                   icon:"success",
@@ -69,6 +93,7 @@ Page({
     
             else{
                 arc.push(this.data.listgood[i]);
+                console.log(arc)
                 wx.showToast({
                   title: '已加入购物车',
                   icon:"success",

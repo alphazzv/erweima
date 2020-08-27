@@ -5,66 +5,82 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    message:"",
+    password:"",
+    success:false,
+    userid:null,
+    datas:{}
+  },
+  // 获取账号 
+  getmessage: function (e) {
+    this.setData({
+      message: e.detail.value
+    })
+  },
+  // 获取密码 
+  getpassword: function (e) {
+    this.setData({
+      password: e.detail.value
+    })
+  },
+  // 登录 
+ check: function () {
+    var that = this;   
+    var warn = null; 
+     console.log(that.data.message)
+     console.log(that.data.password)
+    if (that.data.message.length == 0) {
+      wx.showToast({
+        title: '用户名不能为空',
+        duration: 1000
+      })
+    } else if (that.data.password.length == 0) {
+      wx.showToast({
+        title: '密码不能为空',
+        duration: 1000
+      })
+    }else {
+      
+      wx.request({
+        url: 'https://stu.hrbkyd.com/QRCodeMall/user/login',
+        method: "POST",
+        data: {
+          "account": that.data.message,
+          "password": that.data.password
+        },
+        header: {
+          'content-type': 'application/json'
+        },
+        success: function (res) {
+          console.log(res)
+          if (res.data.code == 401) {  
+            warn = "用户未注册";
+            wx.showModal({
+              title: '提示',
+              content: warn
+            })
+            return;
+          } else {
+            that.setData({
+              success: true,
+            }),
+            wx.setStorageSync('iflogin',that.data.success),
+            wx.setStorageSync('username',that.data.message),
+            wx.switchTab({
+              url: '/pages/yiwuyima/mine/mine',
+            })
+          }
+        }
+ 
+      })
+ 
+ 
+ 
+    }
   },
  zhuce:function(){
     wx.navigateTo({
       url: '/pages/yiwuyima/mine/register/register',
     })
  },
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })

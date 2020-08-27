@@ -1,7 +1,9 @@
 <view class="container">
   <view class="header">用户登录</view>
-  <input class="username" placeholder="账号"></input>
-  <input class="password" placeholder="密码" password="yes"></input>
+  <input class="username" placeholder="账号/邮箱/手机号"
+  bindinput="getmessage"></input>
+  <input class="password" placeholder="密码" password="yes"
+  bindinput="getpassword"></input>
   <button class="register" bindtap="zhuce">还没有账号？去注册</button>
-  <button class="login">登录</button>
+  <button class="login" bindtap="check">登录</button>
 </view>

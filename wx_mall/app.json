@@ -8,7 +8,8 @@
     "pages/yiwuyima/jianjie/index",
     "pages/yiwuyima/address/address",
     "pages/yiwuyima/mine/login/login",
-    "pages/yiwuyima/mine/register/register"
+    "pages/yiwuyima/mine/register/register",
+    "pages/yiwuyima/mine/userdetail/userdetail"
   ],
   "tabBar": {
     "color": "#858585",
