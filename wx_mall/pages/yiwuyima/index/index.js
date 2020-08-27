@@ -60,10 +60,11 @@ Page({
   xx:function(options){
     var thit=this;
     wx.request({
-      url: 'https://stu.hrbkyd.com/QRCodeMall/goods/allGoods',
+      url: 'https://stu.hrbkyd.com/QRCodeMall/user/my',
       method:'GET',
       header:{
-        'content-type':'application/json'
+        'content-type':'application/json',
+        'cookie': wx.getStorageSync("sessionid")
       },
       success:function(res)
       {console.log(res);

@@ -132,7 +132,8 @@
 }
 
 .order-icon-wrap {
-  position: relative;
+  position: initial;
+  margin:60rpx;
 }
 
 .order-icon {

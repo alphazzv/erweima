@@ -45,13 +45,7 @@
                 </view>
                 <text class='ordertxt'>待发货</text>
             </view>
-            <view class='icon-wrap' data-index='3' bindtap='toOrderListTap'>
-                <view class='order-icon-wrap'>
-                    <image class='order-icon' src='/images/icons/yangp.png'>
-                    </image>
-                </view>
-                <text class='ordertxt'>待收货</text>
-            </view>
+            
         </view>
 
   </view>
