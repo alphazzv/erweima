@@ -33,6 +33,11 @@ Page({
       url: '/pages/yiwuyima/mine/login/login',
     })
   },
+  userdetail:function(){
+    wx.navigateTo({
+      url: '/pages/yiwuyima/mine/userdetail/userdetail',
+    })
+  },
   onShow:function()
   { var that=this;
     this.setData({

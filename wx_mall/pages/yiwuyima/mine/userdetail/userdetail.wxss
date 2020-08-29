@@ -1,1 +1,53 @@
-/* pages/yiwuyima/mine/userdetail/userdetail.wxss */
+.nav{
+  background-color: #fff;
+}
+.top{
+width: 250rpx;
+height: 250rpx;
+margin: 0 auto;
+}
+.nickname{
+margin-bottom: 10rpx;
+text-align: center;
+}
+.item{
+height: 70rpx;
+background-color: #fff;
+margin: 20rpx;
+display: flex;
+border-radius: 20rpx;
+}
+.item-ex{
+  height: 70rpx;
+  background-color: #fff;
+  display: flex;
+  border-top: 20rpx;
+  }
+.left{
+display: flex;
+justify-content: flex-start;
+flex-grow: 1;
+}
+.left-ex{
+  margin-top: 20rpx;
+  display: flex;
+  font-size: 26rpx;
+  color: #6495ED;
+  margin-left:10rpx;
+  }
+.right{
+display: flex;
+justify-content: flex-end;
+flex-grow: 1;
+color: #ccc;
+margin-right: 20rpx;
+}
+.right-ex{
+  margin-top: 20rpx;
+  display: flex;
+  font-size: 26rpx;
+  margin-right:10rpx;
+  color: #6495ED;
+  justify-content: flex-end;
+  flex-grow: 1;
+  }

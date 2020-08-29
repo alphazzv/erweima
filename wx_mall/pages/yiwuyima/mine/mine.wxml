@@ -1,12 +1,19 @@
 <scroll-view scroll-y style='height:100vh;'>
-        <view class='head' wx:if="{{hasuserInfo==true}}" bindtap='logout'>
-            <view class="no-login">
-                <view class='no-ava'>
-                    <image class='ava' src="/images/icons/wdl.png"></image>
-                </view>
+        <view class='head' wx:if="{{hasuserInfo==true}}" >
+        <view class="no-login" bindtap='logout'>
+                <view class='suc-ava' >
+                     <view class='avat'>
+                    <open-data type="userAvatarUrl"></open-data>
+                     </view>
+                     </view>
                 <view class='button-login'>{{username}}</view>
-
-            </view>
+               </view>
+        
+             <view class='seemore' bindtap='userdetail'>
+                <view class="text" >查看更多信息</view>
+               <image src='/images/icons/my_order.png'></image>
+               
+               </view>
         </view>
          <view class='head' wx:else bindtap='gotologin'>
             <view class="no-login">

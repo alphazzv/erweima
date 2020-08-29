@@ -65,8 +65,10 @@ Page({
               success: true,
             }),
             console.log(res.header)
+            console.log(res)
             wx.removeStorageSync('sessionid') 
             wx.setStorageSync("sessionid", res.header["Set-Cookie"]);
+            
             wx.setStorageSync('iflogin',that.data.success),
             wx.setStorageSync('username',that.data.message),
             wx.switchTab({

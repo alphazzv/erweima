@@ -4,25 +4,27 @@
 <swiper indicator-dots="{{indicatorDots}}"
   autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="swiper-box" id="top">
   <block wx:for-items="{{banner_list[0].banner}}" wx:key="index">
+
     <swiper-item >
       <image class="slide-image" src="{{item.pic_url}}" bindtap="xx"/>
     </swiper-item>
+
   </block>
 </swiper>
+
 <view class='informbox'>
     <button class="boxbottom1" bindtap="zanshilogin" ><text>产品入门</text></button>
     <button class="boxbottom1" bindtap="jump"><text>产品介绍</text></button>
     <button class="boxbottom1"><text>成功案例</text></button>
 </view>
-<swiper indicator-dots="{{false}}"
- autoplay="{{autoplay}}" interval="{{interval}}" circular="{{true}}" vertical="{{true}}" class="gonggao">
-   <block wx:for="{{xinxiUrls}}" wx:key="key">
-     <swiper-item>
+<view class='bbox'>
+   <swiper indicator-dots="{{false}}" autoplay="{{autoplay}}" interval="{{interval}}" circular="{{true}}" vertical="{{true}}" class="notice-swiper">
+     <swiper-item wx:for="{{xinxiUrls}}" wx:key="key" class="gonggao">
      <image class="icon" src="/images/icons/notice-icon.png"></image>
         <text class="itemtext">{{item}}</text>
      </swiper-item>
-   </block>
-</swiper>
+  </swiper>
+</view>
  
 
 

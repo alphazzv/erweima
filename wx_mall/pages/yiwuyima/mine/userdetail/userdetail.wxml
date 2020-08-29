@@ -1,2 +1,28 @@
 <!--pages/yiwuyima/mine/userdetail/userdetail.wxml-->
-<text>pages/yiwuyima/mine/userdetail/userdetail.wxml</text>
+
+<view class='content'>
+  <view class='nav'>
+    <view class='top'>
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <view class='nickname'>
+    </view>
+  </view>
+<view class='item' >
+     <text class='left'> 用户名：</text>
+     <text class='right'>{{myinfo.userName}}</text>
+    </view>
+    <view class='item' >
+     <text class='left'> 邮箱：</text>
+     <text class='right'>{{myinfo.userEmail}}</text>
+    </view>
+    <view class='item' >
+     <text class='left'> 电话：</text>
+     <text class='right'>{{myinfo.userPhone}}</text>
+    </view>
+    <view class='item-ex'>
+      <view class='left-ex' bindtap="back">返回</view>
+      <text class='right-ex' bindtap="new">信息有误？点此修改</text>
+    </view>
+  
+</view>

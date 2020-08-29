@@ -1,0 +1,26 @@
+.container {
+  margin-top: 90px;
+  margin-left: 30px;
+  margin-right: 30px;
+  padding: 5px;
+  text-align: center;
+}
+.header {
+  text-align: center;
+  height: 50px;
+}
+.phone_number{
+  padding-left: 15px;
+  text-align: left;
+  border-style: solid;
+  border-radius: 20px;
+  border-width: 1px;
+  margin-bottom: 30rpx;
+}
+
+.login{
+  margin-top: 10px;
+  width: 90px;
+  height: 30px;
+  font-size: 80%;
+}

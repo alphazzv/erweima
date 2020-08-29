@@ -38,25 +38,30 @@ page{
     font-size: 26rpx;
     color: #6495ED;
 }
+.bbox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 60rpx;
+    background-color: #fff;
+    box-shadow: 1rpx 4rpx 6rpx #f1f1f1;
+    padding: 0 30rpx;
+}
+.notice-swiper {
+    width: 100%;
+    height: 30rpx;
+}
 .gonggao{
-    width : 100%;
-    height: 38rpx;
-    position: inherit;
-    top: 380rpx;
-    left:15rpx;
-    box-sizing: border-box;
-    background: #ffffff;
+    display: flex;
+    justify-content: flex-start;
 }
 .icon {
     width: 30rpx;
     height: 30rpx;
+    margin-right: 20rpx;
 }
 .itemtext{
-    height: 25rpx;
-    line-height: 25rpx;
-    color: #666;
-    padding-left: 10rpx;
-    font-size: 38rpx;
+    font-size: 24rpx;
 }
 /*四个菜单*/
 .menueview{

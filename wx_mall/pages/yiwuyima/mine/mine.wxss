@@ -91,7 +91,15 @@
   position: relative;
   margin-right: 20rpx;
 }
-
+.head .no-login .suc-ava {
+  width: 128rpx;
+  height: 128rpx;
+  position: relative;
+  margin-right: 20rpx;
+}
+.head .no-login .suc-ava .avat {
+  clip-path: circle(64rpx at center);
+}
 .head .no-login .no-ava .ava {
   width: 128rpx;
   height: 128rpx;
@@ -119,7 +127,7 @@
    color: #333333;
  }
  .btn-container {
-  padding: 30rpx 24rpx;
+  padding: 30rpx 120rpx;
   display: flex;
   justify-content: space-between;
 }
@@ -133,14 +141,12 @@
 
 .order-icon-wrap {
   position: initial;
-  margin:60rpx;
 }
 
 .order-icon {
   width: 80rpx;
   height: 80rpx;
   margin: 0 auto;
-  position: relative;
 }
 .ordertxt
 {

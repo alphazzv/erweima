@@ -1,0 +1,11 @@
+<view class="container">
+  <view class="header">修改信息（正确可忽略）</view>
+  <input class="phone_number" placeholder="请修改用户名"
+  bindinput="getmessage"></input>
+  <input class="phone_number" placeholder="请修改邮箱"
+  bindinput="getemail"></input>
+  <input class="phone_number" placeholder="请修改手机号"
+  bindinput="getphonenum"></input>
+  
+  <button class="login" bindtap="check">确认修改</button>
+</view>
