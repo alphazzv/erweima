@@ -131,7 +131,7 @@ Page({
      if (that.data.phonenum.length != 0)
      {
       wx.request({
-        url: 'https://stu.hrbkyd.com/QRCodeMall/admin/updateUser',
+        url: 'https://stu.hrbkyd.com/QRCodeMall/user/modify',
         method: "PUT",
         data: {
             "userPhone": that.data.phonenum,

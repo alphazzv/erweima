@@ -48,7 +48,7 @@ Page({
   xx:function(options){
     var thit=this;
     wx.request({
-      url: 'https://stu.hrbkyd.com/QRCodeMall/user/my',
+      url: 'https://stu.hrbkyd.com/QRCodeMall/user/myAddress?pageNum=1',
       method:'GET',
       header:{
         'content-type':'application/json',

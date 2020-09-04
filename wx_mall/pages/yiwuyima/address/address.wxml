@@ -1,16 +1,33 @@
 <view class="container">
 <scroll-view class="scroll" scroll-y="true">
-  <view wx:for="{{addresses}}">
-    <view class="product-name-wrap">
-      <view class="ui-list-item-info">{{item.name}}
-        <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text> {{item.phone}}
+  <view wx:for="{{addresses}}" >
+    <view class="product-name-wrap" wx:if="{{item.userAddressDefault !== 1}}" >
+      <view class="ui-list-item-info"  bindtap="moren" data-id="{{item.userAddressId}}">{{item.receiveName}}
+        <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text> {{item.receivePhone}}
+        <p wx:if="{{item.userAddressDefault == 1}}" class="ui-list-item-mr" >默认</p>
       </view>
       <view class="ui-list-item-address">
-        {{item.address}}
+        {{item.userAddressProvince}}
+        <text decode="{{true}}" space="{{true}}">&nbsp;</text> {{item.userAddressCity}}
       </view>
       <view class="ui-list-item-time">
-        <p>{{item.detailInfo}}</p>
-        <p class="ui-list-item-del" data-id="{{index}}" bindtap="delAddress">删除</p>
+        <p>{{item.userAddressDetail}}</p>
+        <p class="ui-list-item-del" data-id="{{item.userAddressId}}" bindtap="delAddress">删除</p>
+      </view>
+      <view class="separate"></view>
+    </view>
+    <view class="product-name-wrap" wx:else>
+      <view class="ui-list-item-info">{{item.receiveName}}
+        <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text> {{item.receivePhone}}
+        <p wx:if="{{item.userAddressDefault == 1}}" class="ui-list-item-mr">默认</p>
+      </view>
+      <view class="ui-list-item-address">
+        {{item.userAddressProvince}}
+        <text decode="{{true}}" space="{{true}}">&nbsp;</text> {{item.userAddressCity}}
+      </view>
+      <view class="ui-list-item-time">
+        <p>{{item.userAddressDetail}}</p>
+        <p class="ui-list-item-del" data-id="{{item.userAddressId}}" bindtap="delAddress">删除</p>
       </view>
       <view class="separate"></view>
     </view>

@@ -38,6 +38,17 @@ Page({
       url: '/pages/yiwuyima/mine/userdetail/userdetail',
     })
   },
+  toOrderListTap:function(e)
+  {
+    let showType =e.currentTarget.dataset.index;
+    console.log(showType)
+    wx.setStorageSync('showType', showType);
+
+    wx.navigateTo({
+        url: '/pages/yiwuyima/orders/orders?showType=' + showType,
+    });
+
+  },
   onShow:function()
   { var that=this;
     this.setData({

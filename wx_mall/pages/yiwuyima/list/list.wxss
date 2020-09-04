@@ -19,11 +19,13 @@ page{
   height: 90rpx;
   line-height: 90rpx;
   text-align: center;
+  font-size: 30rpx;
 }
 .categroy-left .cate-list.on{
-  color: #008842;
-  border-left: 3px solid #008842;
-  font-size: 1.1rem;
+  color: #00AA00;
+  border-left: 3px solid #00AA00;
+  font-size: 0.9rem;
+
 }
 .cate-box {
   padding: 30rpx;

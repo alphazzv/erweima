@@ -17,6 +17,7 @@ page{
   margin: 0px 10px;
   font-size: 14px;
   color: #404040;
+  box-shadow: 10rpx 15rpx 18rpx #f1f1f1;
 }
 .ui-list-item-info{
   margin: 5px 0px;
@@ -31,6 +32,14 @@ page{
   position: absolute;
   right: 10px;
   color: #ff0000;
+  margin-right: 10rpx;
+}
+.ui-list-item-mr{
+  position: absolute;
+  right: 10px;
+  font-size:24rpx;
+  color: #959595;
+  margin-right: 10rpx;
 }
 /* 分割线 */
 .separate {

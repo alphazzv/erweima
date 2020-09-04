@@ -34,6 +34,8 @@ flex-grow: 1;
   font-size: 26rpx;
   color: #6495ED;
   margin-left:10rpx;
+  flex-grow: 1;
+  justify-content: flex-start;
   }
 .right{
 display: flex;
