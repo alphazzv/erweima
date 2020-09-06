@@ -70,7 +70,7 @@ Page({
                 
                     if(arc[j].goodsId == e.target.id){
                       
-                        arc[j].goodsStatus = arc[j].goodsStatus + 1;
+                        arc[j].goodsStatus = 1;
                         
                         try {
                             wx.setStorageSync('cartt', arc)

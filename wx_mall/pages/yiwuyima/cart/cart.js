@@ -13,18 +13,21 @@ Page({
   zf:function()
   { var adds = wx.getStorageSync('cartt')||[];
     
-    for (var index in adds) 
-    {
-      var jsonObj = {"goodsId":adds[index].goodsId};
-      console.log(adds[index].goodsId)
+  
+      console.log(this.data.totalPrice)
      
     wx.request({
-      url: 'https://stu.hrbkyd.com/QRCodeMall/goods/addToShoppingCart',
-      data: jsonObj,
+      url: 'https://stu.hrbkyd.com/QRCodeMall/user/addBill',
+      data: {
+        "userBillDirection": 0,
+        "userBillMoney": this.data.totalPrice,
+        "userId":wx.getStorageSync("userid")
+        },
+        header: {
+          'content-type': 'application/json',
+          'cookie': wx.getStorageSync("sessionid")
+        },
       method: 'POST', 
-      header: {
-        'content-type': 'application/json'
-      },
       success: function (res) {
         console.log(JSON.stringify(res.data))
       },
@@ -52,7 +55,7 @@ Page({
     }
     catch(e)
     {console.log(e)}
-  }},
+  },
 onShow()
   {
     var that=this;
