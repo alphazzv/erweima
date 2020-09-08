@@ -11,24 +11,39 @@ page{
     height: 375rpx;
     width:100%;
 }
-.informbox {
-    position: relative;
-    display: flex;
-    align-items: center;
-    height: 60rpx;
-    background-color: #fff;
-    box-shadow:  #f1f1f1;
+.output
+{
+    margin: 20rpx 0;
+    width: 100%;
+    height: 120rpx;
+    box-sizing: border-box;
 }
-.boxbottom1{
-    flex:0.8;
-    height: 100%;
+.informbox {
+
+    height: 120rpx;
+    width: 100%;
+    padding:0 80rpx;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.output .boxbottom1{
+    width: 100rpx;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    background-color: #f8f8f8;
-    font-size:35rpx;
-    color: black;
+    justify-content: center;
     
+}
+.output .tp {
+    height: 110rpx;
+    width: 100rpx;
+}
+.output .txt {
+    width: 100%;
+    text-align: center;
+    font-size: 25rpx;
+    margin-top: 10rpx;
 }
 .more {
     width: 100%;

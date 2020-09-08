@@ -7,9 +7,6 @@ Page({
     goodsCount:0,
     selectAllStatus:true   // 全选状态，默认全
   },
-  /**
-   * 当前商品选中事件
-   */
   zf:function()
   { var adds = wx.getStorageSync('cartt')||[];
     
@@ -82,21 +79,35 @@ onShow()
     });
     this.getTotalPrice();
   },
-
-  /**
-   * 删除购物车当前商品
-   */
   deleteList(e) {
+    console.log(e.currentTarget.id)
     const index = e.currentTarget.dataset.index;
     let carts = this.data.carts;
     carts.splice(index,1);
     this.setData({
       carts: carts
     });
+    wx.request({
+      url: 'https://stu.hrbkyd.com/QRCodeMall/goods/deleteShoppingCartGoods',
+      method: 'POST', 
+      data: 
+        [e.currentTarget.id]
+        ,
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function (res) {
+        console.log(res)
+      },
+     
+    });
+
+  
     if(!carts.length){
       this.setData({
         hasList: false,
       });
+      
       try{
         wx.setStorageSync('cartt', this.data.carts)
       }
@@ -107,9 +118,6 @@ onShow()
     }
   },
 
-  /**
-   * 购物车全选事件
-   */
   selectAll(e) {
     let selectAllStatus = this.data.selectAllStatus;
     selectAllStatus = !selectAllStatus;
@@ -125,9 +133,6 @@ onShow()
     this.getTotalPrice();
   },
 
-  /**
-   * 绑定加数量事件
-   */
   addCount(e) {
     const index = e.currentTarget.dataset.index;
     let carts = this.data.carts;
@@ -146,9 +151,6 @@ onShow()
     this.getTotalPrice();
   },
 
-  /**
-   * 绑定减数量事件
-   */
   minusCount(e) {
     const index = e.currentTarget.dataset.index;
     const obj = e.currentTarget.dataset.obj;
@@ -170,9 +172,6 @@ onShow()
     this.getTotalPrice();
   },
 
-  /**
-   * 计算总价
-   */
   getTotalPrice() {
     let carts = this.data.carts;                  // 获取购物车列表
     let total = 0;
@@ -181,7 +180,7 @@ onShow()
         total += carts[i].goodsStatus * carts[i].goodsPrice;   // 所有价格加起来
       }
     }
-    this.setData({                                // 最后赋值到data中渲染到页面
+    this.setData({                    
       carts: carts,
       totalPrice: total.toFixed(2)
     });

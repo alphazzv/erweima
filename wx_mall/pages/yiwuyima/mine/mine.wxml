@@ -40,14 +40,14 @@
     <view class='btn-container'>
             <view class='icon-wrap' data-index='1' bindtap='toOrderListTap'>
                 <view class='order-icon-wrap'>
-                    <image class='order-icon' src='/images/icons/yangp.png'>
+                    <image class='order-icon' src='/images/icons/wait.png'>
                     </image>
                 </view>
                 <text class='ordertxt'>待付款</text>
             </view>
             <view class='icon-wrap' data-index='2' bindtap='toOrderListTap'>
                 <view class='order-icon-wrap'>
-                    <image class='order-icon' src='/images/icons/yangp.png'>
+                    <image class='order-icon' src='/images/icons/pay.png'>
                     </image>
                 </view>
                 <text class='ordertxt'>待发货</text>
@@ -59,25 +59,41 @@
 
 
   <navigator url="/pages/yiwuyima/jianjie/index" class='item'>
+   
     <view class='left'>
-      简介
+    <view class='icon'>
+     <image class='img' src='/images/icons/yangp.png'></image>
+     </view>
+     <view class='txt'> 简介 
+    </view>
     </view>
     <view class='right'>
-      <image src='/images/icons/my_order.png'></image>
+      <image class='rimage' src='/images/icons/my_order.png'></image>
     </view>
   </navigator>
   <navigator url="/pages/yiwuyima/address/address" class='item'>
     <view class='left'>
-      地址管理
+    <view class='icon'>
+     <image class='img' src='/images/icons/dizhi.png'></image>
+     </view>
+    <view class='txt'> 地址管理
+    </view>
+      
     </view>
     <view class='right'>
-      <image src='/images/icons/my_order.png'></image>
+      <image class='rimage' src='/images/icons/my_order.png'></image>
     </view>
   </navigator>
     <navigator bindtap='kf' class='item'>
-        <view class='left'>客服</view>
+        <view class='left'>
+        <view class='icon'>
+     <image class='img' src='/images/icons/kefu.png'></image>
+     </view>
+        <view class='txt'> 客服</view>
+        </view>
     <view class='right'>
-      <image src='/images/icons/my_order.png'></image>
+      <image class='rimage' src='/images/icons/my_order.png'></image>
     </view>
   </navigator>
+
 </scroll-view>

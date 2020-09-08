@@ -18,6 +18,7 @@
 .ordercont .dingdan {
   height: 90rpx;
   font-size: 30rpx;
+  border-top: 1px solid #dedede;
   color: #333;
   display: flex;
   justify-content: space-between;
@@ -40,7 +41,7 @@
   background: #4d35d3;
 }
 .top-title .text{
-  font-size: 14px;
+  font-size: 30rpx;
   color: #333333;
 }
 .seemore image{
@@ -77,7 +78,7 @@
 .btn-login {
   height: 80rpx;
   line-height: 80rpx;
-  font-size: 38rpx;
+  font-size: 28rpx;
 }
 .head .no-login {
   display: flex;
@@ -123,7 +124,7 @@
  
  .top .text{
    text-align: center;
-   font-size: 14px;
+   font-size: 30rpx;
    color: #333333;
  }
  .btn-container {
@@ -153,58 +154,47 @@
    font-size: 30rpx;
    color:#666;
 }
- .item{
-   display: flex;
-   line-height: 40px;
-   border-bottom: 1px solid #dedede;
-   background: #fff;
-   padding: 0 16px;
+.item{
+  height: 90rpx;
+  font-size: 30rpx;
+  border-bottom: 1px solid #dedede;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:15rpx 20rpx;
  }
  
- .item .left{
-   flex: 1 0 50%;
-   font-size: 14px;
-   color: #333333;
+.item .left{
+  flex: 1 0 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
  }
- 
- .item .right{
+.item .left .icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+.item .left .icon .img {
+  width: 40rpx;
+  height: 40rpx;
+}
+.item .left .txt{
+  font-size: 30rpx;
+}
+.item .right{
    flex: 1 0 50%;
    display: flex;
    justify-content: flex-end;
    align-items: center;
  }
  
- .item image{
+.item .rimage{
    width: 8px;
    height: 15px;
  }
  
- .item text{
-   font-size: 12px;
-   color: #999999;
-   padding-right: 10px;
- }
+
  
- .icon{
-   border-bottom:1px solid #EDEDED; 
-   display: flex;
-   padding: 12px 0;
- }
- .icon image{
-   display: block;
-   width: 30px;
-   height: 30px;
-   margin: 0 auto;
-   padding-top: 10px;
- }
- .icon text{
-   display: block;
-   text-align: center;
-   width: 100%;
-   font-size: 14px;
-   color: #333;
-   padding-top: 10px;
- }
- .icon navigator{
-   flex: 1 0 25%;
- }
+ 

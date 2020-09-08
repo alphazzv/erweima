@@ -48,7 +48,7 @@ Page({
   xx:function(options){
     var thit=this;
     wx.request({
-      url: 'https://stu.hrbkyd.com/QRCodeMall/user/myBill?pageNum=1',
+      url: 'https://stu.hrbkyd.com/QRCodeMall/goods/shoppingCart',
       method:'GET',
       header:{
         'content-type':'application/json',

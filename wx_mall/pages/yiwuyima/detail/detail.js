@@ -100,7 +100,23 @@ Page({
                   duration:3000
                 })
             }
-            
+            wx.request({
+              url: 'https://stu.hrbkyd.com/QRCodeMall/goods/addToShoppingCart',
+              data: {
+                "goodsId": this.data.detailgood.goodsId,
+                },
+                header: {
+                  'content-type': 'application/json',
+                  'cookie': wx.getStorageSync("sessionid")
+                },
+              method: 'POST', 
+              success: function (res) {
+                console.log(JSON.stringify(res.data))
+              },
+              fail: function (res) {
+                console.log('wrong' + ':' + res)
+              },
+            })
             try {
                 wx.setStorageSync('cartt', arc)
                
