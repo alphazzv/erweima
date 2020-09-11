@@ -1,0 +1,69 @@
+<view class="spxx">案例在线体验</view>
+<view class='btn-container'>
+            <view class='icon-wrap'>
+                <view class='order-icon-wrap'>
+                    <image class='order-icon' src='/images/icons/anliyp.png'>
+                    </image>
+                </view>
+                <text class='ordertxt'>农药行业</text>
+            </view>
+            <view class='icon-wrap'>
+                <view class='order-icon-wrap'>
+                    <image class='order-icon' src='/images/icons/anliyp.png'>
+                    </image>
+                </view>
+                <text class='ordertxt'>农药行业</text>
+            </view>
+            
+        </view>
+        <view class='btn-container'>
+            <view class='icon-wrap'>
+                <view class='order-icon-wrap'>
+                    <image class='order-icon' src='/images/icons/anliyp.png'>
+                    </image>
+                </view>
+                <text class='ordertxt'>化肥行业</text>
+            </view>
+            <view class='icon-wrap'>
+                <view class='order-icon-wrap'>
+                    <image class='order-icon' src='/images/icons/anliyp.png'>
+                    </image>
+                </view>
+                <text class='ordertxt'>化肥行业</text>
+            </view>
+            
+        </view>
+        <view class='btn-container'>
+            <view class='icon-wrap'>
+                <view class='order-icon-wrap'>
+                    <image class='order-icon' src='/images/icons/anliyp.png'>
+                    </image>
+                </view>
+                <text class='ordertxt'>蔬菜行业</text>
+            </view>
+            <view class='icon-wrap'>
+                <view class='order-icon-wrap'>
+                    <image class='order-icon' src='/images/icons/anliyp.png'>
+                    </image>
+                </view>
+                <text class='ordertxt'>蔬菜行业</text>
+            </view>
+            
+        </view>
+        <view class='btn-container'>
+            <view class='icon-wrap'>
+                <view class='order-icon-wrap'>
+                    <image class='order-icon' src='/images/icons/anliyp.png'>
+                    </image>
+                </view>
+                <text class='ordertxt'>水果行业</text>
+            </view>
+            <view class='icon-wrap'>
+                <view class='order-icon-wrap'>
+                    <image class='order-icon' src='/images/icons/anliyp.png'>
+                    </image>
+                </view>
+                <text class='ordertxt'>水果行业</text>
+            </view>
+            
+        </view>

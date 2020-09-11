@@ -30,7 +30,7 @@
     <view class="boxbottom1" bindtap="jump">
     <image class="tp" src='/images/icons/jss.png'></image><view class="txt">产品介绍</view></view>
     <view class="boxbottom1">
-    <image class="tp" src='/images/icons/cp.png'></image><view class="txt">成功案例</view></view>
+    <image class="tp" bindtap="toanli" src='/images/icons/cp.png'></image><view class="txt">成功案例</view></view>
 </view>
 </view>
 

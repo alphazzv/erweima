@@ -1,0 +1,34 @@
+.spxx
+{
+  font-size:100%;
+  color:black;
+  font-weight: bold;
+  margin-left:10rpx;
+  margin-top:30rpx;
+}
+ .btn-container {
+  padding: 30rpx 120rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon-wrap {
+  width: 29%;
+  text-align: center;
+  display: inline-block;
+}
+
+.order-icon-wrap {
+  position: initial;
+}
+
+.order-icon {
+  width: 160rpx;
+  height: 160rpx;
+  margin: 0 auto;
+}
+.ordertxt
+{
+   font-size: 35rpx;
+   color:black;
+}

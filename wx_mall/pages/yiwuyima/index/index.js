@@ -17,19 +17,14 @@ Page({
       {
         "banner": [
           {
-            "pic_url": "https://stu.hrbkyd.com/QRCodeMall/Carousel/addCarousel?carouselLink=1",
+            "pic_url": "http://i.jisuma.cn/qrcode/ig/lunbo1.jpg",
           },
           {
-            "pic_url": "http://img11.yiguoimg.com/e/ad/2016/160927/585749449690947899_800x400.jpg",
+            "pic_url": "http://i.jisuma.cn/qrcode/ig/lunbo2.jpg",
           },
+         
           {
-            "pic_url": "http://img14.yiguoimg.com/e/ad/2016/160923/585749449636290871_800x400.jpg",
-          },
-          {
-            "pic_url": "http://img13.yiguoimg.com/e/ad/2016/160914/585749449480315182_800x400.jpg",
-          },
-          {
-            "pic_url": "http://img14.yiguoimg.com/e/ad/2016/161010/585749449889390922_800x400.jpg",
+            "pic_url": "http://i.jisuma.cn/qrcode/ig/lunbo3.jpg",
           }
         ]
       },
@@ -48,7 +43,7 @@ Page({
   xx:function(options){
     var thit=this;
     wx.request({
-      url: 'https://stu.hrbkyd.com/QRCodeMall/goods/shoppingCart',
+      url: 'https://stu.hrbkyd.com/QRCodeMall/goodsType/all',
       method:'GET',
       header:{
         'content-type':'application/json',
@@ -112,9 +107,10 @@ Page({
       url: '/pages/yiwuyima/jianjie/index',
     })
  },
-zanshilogin:function(){
+
+toanli:function(){
   wx.navigateTo({
-    url: '/pages/yiwuyima/mine/login/login',
+    url: '/pages/yiwuyima/anli/anli',
   })
 },
   //事件处理函数

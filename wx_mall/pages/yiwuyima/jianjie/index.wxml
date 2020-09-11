@@ -1,9 +1,12 @@
 <!--index.wxml-->
-<!--pages/wxml/index.wxml-->
-<button bindtap="onClick" class="xx"></button>
-<button bindtap="onClick" class="xx"></button>
-<button bindtap="onClick" class="xx"></button>
 <image mode="widthFix" src="../../../images/icons/zzz.png"></image>
+
+<view class="spxx">一物一码 品质溯源</view>
+<text class="js" decode="{{true}}">&emsp;&emsp;每一件产品都具有独一无二的可追溯二维码，即每一个产品都具有唯一的识别代码，保障品质产品的生产、加工、流通、销售全程可追溯。</text>
+<view class="spxx">产品防伪 经销防窜</view>
+<text class="js" decode="{{true}}">&emsp;&emsp;一物一码，保障了产品都具有独立唯一的"身份证"，防止产品的假冒伪劣现象，可实现产品区域管理，防止经销商窜货现象的发生。</text>
+<view class="spxx">来可查 去可追</view>
+<text class="js" decode="{{true}}">&emsp;&emsp;实现企业产品追溯信息可查询，产品来源可追溯、去向可查证、责任可追究、问题产品可召回的全生命周期追溯体系建设。</text>
+<view class="spxx">物联网 促营销</view>
+<text class="js" decode="{{true}}">&emsp;&emsp;企业大数据数字化管理，实现产品走进物联网+时代，不仅提升了产品的品牌形象与知名度，也提高了消费者对企业产品的可信度。</text>
 <view class="xx">一物一码二维码销售平台</view>
-<view class="spxx">简介</view>
-<view class="js">本电商平台是一个专注于服务东三省种植水稻的小微农户的电商平台，可以线上交易，并且该平台提供一物一码溯源的功能，让在平台上买东西的人可以追根溯源农产品具体的产地，契合现代人健康生活的理念，让人们更愿意购买农户手中的大米产品。我们团队将对农民手中的大米产品进行产品包装，打造品牌，使农民手中产品的曝光率增加，让国内外较大的经销商可以直接和农民打交道，使得农产品交易中没有中间商赚差价，使农民收入增加，此外，企业的运营成本减少，在企业营运过程中不断丰富自有的数据库，实现惠农利农，帮助农民走出贫困，帮助企业获得较大收益，实现双赢。</view>
